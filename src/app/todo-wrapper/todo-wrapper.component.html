@@ -1,0 +1,8 @@
+<div class="custom-body">
+  <div class="bg-primary text-white p-5 mb-5">
+    <app-todo-form (newTodo)="addTodo($event)"></app-todo-form>
+  </div>
+  <div class="container">
+    <app-todo-list [todos]="todos" (sendTodoId)="sendTodoIdFn($event)"></app-todo-list>
+  </div>
+</div>

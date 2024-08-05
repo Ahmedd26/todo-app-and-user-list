@@ -1,0 +1,37 @@
+<div
+  class="d-flex border border-2 shadow-sm m-2 rounded-3"
+  [ngClass]="todo.status ? 'bg-success-subtle' : 'bg-white'"
+>
+  <div class="p-4 text-center border-right d-flex align-items-center">
+    <span>{{ todo.id }}</span>
+  </div>
+
+  <div class="p-4 border-right flex-grow-1 d-flex align-items-center">
+    <p
+      class="mb-0"
+      [ngStyle]="{ 'text-decoration': todo.status ? 'line-through' : 'none' }"
+    >
+      {{ todo.title }}
+    </p>
+  </div>
+
+  <div
+    class="p-4 text-center border-right d-flex align-items-center"
+    style="width: 128px"
+  >
+    <span
+      class="badge"
+      style="cursor: pointer"
+      [ngClass]="todo.status ? 'text-bg-success' : 'text-bg-warning'"
+      (click)="changeStatus()"
+    >
+      {{ todo.status ? "Completed" : "Pending" }}
+    </span>
+  </div>
+
+  <div class="px-4 text-center d-flex align-items-center">
+    <button class="btn btn-outline-danger" (click)="deleteItem(todo.id)">
+      <i class="fa fa-solid fa-trash" aria-hidden="true"></i> Delete
+    </button>
+  </div>
+</div>

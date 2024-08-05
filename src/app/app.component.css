@@ -1,0 +1,10 @@
+.button-positioning {
+  position: absolute;
+  top: 48px;
+}
+.left {
+  left: 48px;
+}
+.right {
+  right: 48px;
+}

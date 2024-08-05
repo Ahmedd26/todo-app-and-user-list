@@ -1,0 +1,25 @@
+<div class="container">
+  <h1 class="my-5">Users</h1>
+  <!-- Start Search -->
+  <div class="row mb-5">
+    <form class="d-flex" role="search">
+      <input
+        class="form-control me-2"
+        type="search"
+        placeholder="Search"
+        aria-label="Search"
+      />
+      <button class="btn btn-outline-success" type="submit">Search</button>
+    </form>
+  </div>
+  <!-- End Search -->
+  <div
+    class="row row-cols-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-4 g-4 mb-5"
+  >
+    @for(user of users ; track user.id){
+    <!-- <div class="col"> -->
+    <app-user-card [user]="user"></app-user-card>
+    <!-- </div> -->
+    }
+  </div>
+</div>
